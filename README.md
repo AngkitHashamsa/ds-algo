@@ -20,7 +20,7 @@ fibonacci(4);
 fibonacci(7);
 ```
 
-### Big O = O(n)
+Big O = O(n)
 
 ---
 
