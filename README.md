@@ -194,6 +194,20 @@ factorial of 1 is 1
 
 Big O = linear time complexity o(n)
 
+```js
+function recursiveFactorial(n) {
+    if (n === 0) {
+        return 1;
+    }
+
+    return n * recursiveFactorial(n - 1);
+}
+
+console.log(recursiveFactorial(1)); // 1
+console.log(recursiveFactorial(2)); // 2
+console.log(recursiveFactorial(3)); // 4
+```
+
 [go-top](#top)
 
 ---
