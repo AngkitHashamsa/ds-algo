@@ -1,3 +1,19 @@
+-   [Fibonacci sequence](#fibonacci-sequence)
+-   [Factorial of an integer](#factorial-of-an-integer)
+-   [Determine if the number is prime or not](#given-a-natural-number-n-determine-if-the-number-is-prime-or-not)
+-   [Recursive Fibonacci sequence](#recursive-fibonacci-sequence)
+-   [Recursive factorial of a number](#recursive-factorial-of-a-number)
+
+# top
+
+---
+
+## Time complexity
+
+![](images/TIme-complexity.png)
+
+---
+
 # Fibonacci sequence
 
 Give a number 'n',find the first 'n' elements of the fibonacci sequence
@@ -20,9 +36,9 @@ fibonacci(4);
 fibonacci(7);
 ```
 
-Big O = O(n)
+Big O = O(n) <br>
 
----
+[go-top](#top)
 
 # Factorial of an integer
 
@@ -40,7 +56,8 @@ console.log(factorial(4););
 }
 ```
 
-Big O = O(n)
+Big O = O(n) <br>
+[go-top](#top)
 
 ---
 
@@ -92,7 +109,8 @@ function isPrimeNumberWithSqrt(n) {
 // console.log(isPrimeNumberWithSqrt(23));
 ```
 
-Big-O = O(srt(n))
+Big-O = O(srt(n)) <br>
+[go-top](#top)
 
 ---
 
@@ -125,3 +143,57 @@ function isPowerOTwo(n) {
 ```
 
 Input size reduce half therefore O(logn)
+
+[go-top](#top)
+
+---
+
+# Recursive Fibonacci sequence
+
+The Fibonacci is sequence in which each number is the sum of the two preceding
+
+if F represents a function to calculate the fibonacci number,then
+
+> F<sub>n</sub> = F<sub>n - 1</sub> + F <sub>n - 2</sub> <br>
+> F<sub>0</sub> = 0 and F<sub>1</sub> = 1 <br>
+> F<sub>2</sub> = F<sub>1</sub> + F<sub>0</sub> <br>
+> F<sub>2</sub> = 1 + 0
+
+```js
+function recursiveFibonacci(n) {
+    if (n < 2) return n;
+    return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
+}
+
+console.log(recursiveFibonacci(0)); // 0
+console.log(recursiveFibonacci(2)); // 1
+console.log(recursiveFibonacci(6)); // 8
+```
+
+![recursive -time complexity](images/recursive.PNG)
+
+Big O = 2<sup>n</sup>
+
+[go-top](#top)
+
+---
+
+# Recursive factorial of a number
+
+**Problem** - Given an integer 'n', find the factorial of the integer
+
+The factorial of a non-integer 'n', denoted n! , is the product of all positive integers less than or equal to 'n'.
+
+factorial of zero is 1 <br>
+factorial of 1 is 1
+
+> 2 = 2 \* 1 <br>
+> 3 = 3 \* 2 \* 1 <br>
+> 4 = 4 \* 3 \* 2 \* 1 <br>
+> n! = n × (n - 1)! x ....... x 1
+
+Big O = linear time complexity o(n)
+
+[go-top](#top)
+
+---
