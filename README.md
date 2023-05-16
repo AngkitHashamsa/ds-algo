@@ -170,7 +170,7 @@ console.log(recursiveFibonacci(2)); // 1
 console.log(recursiveFibonacci(6)); // 8
 ```
 
-![](images/recursive.PNG)
+![](images/recursive.png)
 
 Big O = 2<sup>n</sup>
 
