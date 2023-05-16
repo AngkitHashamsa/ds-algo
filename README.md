@@ -1,10 +1,10 @@
+# DSA
+
 -   [Fibonacci sequence](#fibonacci-sequence)
 -   [Factorial of an integer](#factorial-of-an-integer)
 -   [Determine if the number is prime or not](#given-a-natural-number-n-determine-if-the-number-is-prime-or-not)
 -   [Recursive Fibonacci sequence](#recursive-fibonacci-sequence)
 -   [Recursive factorial of a number](#recursive-factorial-of-a-number)
-
-# top
 
 ---
 
@@ -38,7 +38,7 @@ fibonacci(7);
 
 Big O = O(n) <br>
 
-[go-top](#top)
+[go-top](#dsa)
 
 # Factorial of an integer
 
@@ -57,7 +57,7 @@ console.log(factorial(4););
 ```
 
 Big O = O(n) <br>
-[go-top](#top)
+[go-top](#dsa)
 
 ---
 
@@ -110,7 +110,7 @@ function isPrimeNumberWithSqrt(n) {
 ```
 
 Big-O = O(srt(n)) <br>
-[go-top](#top)
+[go-top](#dsa)
 
 ---
 
@@ -144,7 +144,7 @@ function isPowerOTwo(n) {
 
 Input size reduce half therefore O(logn)
 
-[go-top](#top)
+[go-top](#dsa)
 
 ---
 
@@ -174,7 +174,7 @@ console.log(recursiveFibonacci(6)); // 8
 
 Big O = 2<sup>n</sup>
 
-[go-top](#top)
+[go-top](#dsa)
 
 ---
 
@@ -192,8 +192,6 @@ factorial of 1 is 1
 > 4 = 4 \* 3 \* 2 \* 1 <br>
 > n! = n × (n - 1)! x ....... x 1
 
-Big O = linear time complexity o(n)
-
 ```js
 function recursiveFactorial(n) {
     if (n === 0) {
@@ -208,6 +206,8 @@ console.log(recursiveFactorial(2)); // 2
 console.log(recursiveFactorial(3)); // 4
 ```
 
-[go-top](#top)
+Big O = linear time complexity o(n)
+
+[go-top](#dsa)
 
 ---
