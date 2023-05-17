@@ -1,3 +1,4 @@
+// @ts-check
 function fibonacci(num) {
     let fib = [0, 1];
     for (let i = 2; i < num; i++) {
@@ -56,11 +57,21 @@ function isPowerOTwo(n) {
     return true;
 }
 
+/**
+ *
+ * @param {number} n - integer
+ * @returns {number}
+ */
 function recursiveFibonacci(n) {
     if (n < 2) return n;
     return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
 }
 
+/**
+ *
+ * @param {number} n - integer
+ * @returns {number}
+ */
 function recursiveFactorial(n) {
     if (n === 0) {
         return 1;
@@ -69,4 +80,40 @@ function recursiveFactorial(n) {
     return n * recursiveFactorial(n - 1);
 }
 
-console.log(recursiveFactorial(1));
+/**
+ * Linear search
+ * @param {number[]} arr
+ * @param {number} t
+ * @returns
+ */
+function linearSearch(arr, t) {
+    for (let i = 0; i < arr.length; i++) {
+        if (t === arr[i]) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+/**
+ * binarySearch
+ * @param {number[]} arr
+ * @param {number} target
+ * @returns
+ */
+function binarySearch(arr, target) {
+    let leftIndex = 0;
+    let rightIndex = arr.length - 1;
+    while (leftIndex <= rightIndex) {
+        let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
+
+        if (target === arr[middleIndex]) return middleIndex;
+
+        if (target < arr[middleIndex]) {
+            rightIndex = middleIndex - 1;
+        } else {
+            leftIndex = middleIndex + 1;
+        }
+    }
+}

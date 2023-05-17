@@ -6,11 +6,22 @@
 -   [Recursive Fibonacci sequence](#recursive-fibonacci-sequence)
 -   [Recursive factorial of a number](#recursive-factorial-of-a-number)
 
+-   [Linear Search](#linear-search)
+-   [Binary search](#binary-search)
+
 ---
 
 ## Time complexity
 
 ![](images/TIme-complexity.png)
+
+BIG-O Guide
+
+Calculation not dependent on input size - O(1)
+
+1 loop - O(n) <br>
+2 nested loops - (n<sup>2</sup>)
+Input size reduce by half - O(logn)
 
 ---
 
@@ -207,6 +218,76 @@ console.log(recursiveFactorial(3)); // 4
 ```
 
 Big O = linear time complexity o(n)
+
+[go-top](#dsa)
+
+---
+
+# Linear Search
+
+**_Problem_** - Given an array of 'n' elements and target element 't', find the index of 't' in the array. Return -1 if the target is not found
+
+> arr = [-5,2,10,4,6] , t= 10 -> should return 2
+
+```js
+function linearSearch(arr, t) {
+    for (let i = 0; i < arr.length; i++) {
+        if (t === arr[i]) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+console.log(linearSearch([-5, 2, 10, 4, 6], 6)); //4
+console.log(linearSearch([-5, 2, 10, 4, 6], 12)); //-1
+```
+
+Big O = linear time complexity O(n)
+
+[go-top](#dsa)
+
+---
+
+# Binary search
+
+**_Problem_** - Given a sorted array of 'n' elements and a target element 't', find the index of 't' in the array. Return -1 if the target is not found.
+
+Note: Binary search only works on sorted array
+
+> arr = [-5,2,4,6,10], t=10 ->Should return 4
+> arr = [-5,2,4,6,10], t=6 ->Should return 3
+
+### Binary search pseudocode
+
+> [-5] [2] [4] [6] [10] | target = [6]
+
+-   If the array is empty return -1 as the element cannot be found.
+-   If the array has elements, find the middle elements in the array. If target is equal to middle element, return the middle element index.
+-   If the target is less than the middle element ,binary search the left
+-   If the target is greater than middle element binary search right half of the array
+
+```js
+function binarySearch(arr, target) {
+    let leftIndex = 0;
+    let rightIndex = arr.length - 1;
+    while (leftIndex <= rightIndex) {
+        let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
+
+        if (target === arr[middleIndex]) return middleIndex;
+
+        if (target < arr[middleIndex]) {
+            rightIndex = middleIndex - 1;
+        } else {
+            leftIndex = middleIndex + 1;
+        }
+    }
+}
+
+console.log(binarySearch([-5, 2, 4, 6, 10], 6)); //3
+```
+
+Big O = O(logn)
 
 [go-top](#dsa)
 

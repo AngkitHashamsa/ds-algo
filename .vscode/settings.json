@@ -1,3 +1,7 @@
 {
-    "cSpell.words": ["logn"]
+    "cSpell.words": [
+        "logn",
+        "pseudocode"
+    ],
+    "js/ts.implicitProjectConfig.checkJs": true
 }
